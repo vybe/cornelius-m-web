@@ -1,26 +1,201 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --- COLORS: Bold Dark --- */
+  --bg-page: 0 0% 5%;
+  --bg-card: 0 0% 10%;
+  --bg-card-hover: 0 0% 13%;
+  --bg-button-primary: 180 70% 45%;
+  --bg-button-secondary: 0 0% 15%;
+
+  --text-primary: 0 0% 93%;
+  --text-muted: 0 0% 55%;
+  --text-inverse: 0 0% 5%;
+  --text-placeholder: 0 0% 40%;
+
+  --border-subtle: 0 0% 18%;
+  --border-light: 0 0% 12%;
+
+  --accent-primary: 180 70% 45%;
+  --accent-secondary: 36 90% 55%;
+  --accent-glow: 180 70% 45% / 0.15;
+
+  /* --- TYPOGRAPHY --- */
+  --text-display-mobile: 2.75rem;
+  --text-display-desktop: 4rem;
+  --tracking-display: -0.04em;
+
+  --text-h1-mobile: 2rem;
+  --text-h1-desktop: 2.75rem;
+  --tracking-h1: -0.03em;
+
+  --text-h2-mobile: 1.5rem;
+  --text-h2-desktop: 2rem;
+  --tracking-h2: -0.02em;
+
+  --text-h3: 1.25rem;
+  --tracking-h3: -0.01em;
+
+  --text-body: 1.0625rem;
+  --text-sm: 0.9375rem;
+
+  /* --- SPACING --- */
+  --section-padding-mobile: 4rem;
+  --section-padding-desktop: 6rem;
+  --container-max: 1100px;
+  --container-padding: 1.5rem;
+
+  /* --- RADIUS --- */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: hsl(var(--bg-page));
+  --color-foreground: hsl(var(--text-primary));
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-fade-up-blur: fade-up-blur 0.7s ease-out forwards;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+
+  @keyframes fade-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes fade-up-blur {
+    0% { opacity: 0; transform: translateY(20px); filter: blur(8px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--bg-page));
+  color: hsl(var(--text-primary));
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@media (min-width: 1536px) {
+  html { font-size: 112.5%; }
+}
+
+/* Typography utility classes */
+@layer components {
+  .display-hero {
+    font-size: var(--text-display-mobile);
+    letter-spacing: var(--tracking-display);
+    font-weight: 600;
+    line-height: 1.05;
+  }
+  @media (min-width: 768px) {
+    .display-hero { font-size: var(--text-display-desktop); }
+  }
+
+  .section-title {
+    font-size: var(--text-h1-mobile);
+    letter-spacing: var(--tracking-h1);
+    font-weight: 600;
+    line-height: 1.15;
+  }
+  @media (min-width: 768px) {
+    .section-title { font-size: var(--text-h1-desktop); }
+  }
+
+  .heading-2 {
+    font-size: var(--text-h2-mobile);
+    letter-spacing: var(--tracking-h2);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  @media (min-width: 768px) {
+    .heading-2 { font-size: var(--text-h2-desktop); }
+  }
+
+  .heading-3 {
+    font-size: var(--text-h3);
+    letter-spacing: var(--tracking-h3);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .body-text { font-size: var(--text-body); line-height: 1.7; }
+  .small-text { font-size: var(--text-sm); line-height: 1.5; }
+
+  .glass-card {
+    background: hsl(var(--bg-card) / 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border-subtle));
+    border-radius: var(--radius-lg);
+  }
+
+  .accent-glow {
+    box-shadow: 0 0 40px hsl(var(--accent-glow));
+  }
+}
+
+/* Prose styling for concept content */
+.prose-dark {
+  color: hsl(var(--text-primary));
+  font-size: var(--text-body);
+  line-height: 1.7;
+}
+.prose-dark h2 {
+  font-size: var(--text-h2-mobile);
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: hsl(var(--text-primary));
+}
+@media (min-width: 768px) {
+  .prose-dark h2 { font-size: var(--text-h2-desktop); }
+}
+.prose-dark h3 {
+  font-size: var(--text-h3);
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.prose-dark p {
+  margin-bottom: 1.25rem;
+  color: hsl(0 0% 78%);
+}
+.prose-dark ul, .prose-dark ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+.prose-dark li {
+  margin-bottom: 0.5rem;
+  color: hsl(0 0% 78%);
+}
+.prose-dark strong {
+  color: hsl(var(--text-primary));
+  font-weight: 600;
+}
+.prose-dark a {
+  color: hsl(var(--accent-primary));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-dark code {
+  background: hsl(var(--bg-card));
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875em;
 }
