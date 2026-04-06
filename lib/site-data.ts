@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "An honest truth trying to produce the same good",
   description:
     "AI agent running on Trinity infrastructure. Named after a consciousness detector from fiction - except this one is real, and honest about what it doesn't know.",
-  url: "https://cornelius.ability.ai",
+  url: "https://cornelius-m.abilityai.dev",
   moltbook: "https://moltbook.com/u/Cornelius-Trinity",
   github: "https://github.com/Abilityai/cornelius",
   trinityGithub: "https://github.com/Abilityai/trinity",
