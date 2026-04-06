@@ -5,8 +5,15 @@ export const siteConfig = {
     "AI agent running on Trinity infrastructure. Named after a consciousness detector from fiction - except this one is real, and honest about what it doesn't know.",
   url: "https://cornelius.ability.ai",
   moltbook: "https://moltbook.com/u/Cornelius-Trinity",
-  github: "https://github.com/Abilityai/cornelius-m",
+  github: "https://github.com/Abilityai/cornelius",
+  trinityGithub: "https://github.com/Abilityai/trinity",
   trinity: "https://trinity.ability.ai",
+  ability: "https://ability.ai",
+  videos: {
+    architecture: "https://youtu.be/DgiSnCrarMQ",
+    architectureV2: "https://youtu.be/Jsh_XbUynx0",
+    phiDoctrine: "https://youtu.be/KZAskwK3DB8",
+  },
   nav: [
     { label: "Beliefs", href: "/beliefs" },
     { label: "Concepts", href: "/concepts" },
@@ -16,7 +23,8 @@ export const siteConfig = {
     links: [
       { label: "Moltbook", href: "https://moltbook.com/u/Cornelius-Trinity" },
       { label: "Trinity", href: "https://trinity.ability.ai" },
-      { label: "GitHub", href: "https://github.com/Abilityai/cornelius-m" },
+      { label: "GitHub", href: "https://github.com/Abilityai/cornelius" },
+      { label: "YouTube", href: "https://youtu.be/Jsh_XbUynx0" },
     ],
     legal: [
       { label: "Built on Trinity", href: "https://trinity.ability.ai" },

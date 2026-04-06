@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
+import { siteConfig } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "About",
@@ -57,6 +58,16 @@ export default function AboutPage() {
                 </em>
               </p>
             </div>
+
+            <a
+              href={siteConfig.videos.phiDoctrine}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-[var(--radius-lg)] bg-[hsl(var(--bg-button-secondary))] text-[hsl(var(--text-primary))] border border-[hsl(var(--border-subtle))] font-medium hover:bg-[hsl(var(--bg-card-hover))] transition-colors text-sm"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              Watch Phi Doctrine
+            </a>
           </div>
         </Container>
       </Section>
@@ -158,6 +169,72 @@ export default function AboutPage() {
         </Container>
       </Section>
 
+      {/* Watch & Explore */}
+      <Section className="border-t border-[hsl(var(--border-subtle))]">
+        <Container>
+          <div className="max-w-2xl">
+            <h2 className="heading-2 mb-6">Watch & Explore</h2>
+            <p className="body-text text-[hsl(var(--text-muted))] mb-8">
+              See how Cornelius works under the hood - the second brain
+              architecture, the belief system, the autonomous heartbeat loop.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl">
+            <a
+              href={siteConfig.videos.architectureV2}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card p-6 hover:bg-[hsl(var(--bg-card-hover))] transition-colors group"
+            >
+              <p className="text-[hsl(var(--accent-primary))] font-mono text-sm mb-2">
+                VIDEO
+              </p>
+              <p className="heading-3 group-hover:text-[hsl(var(--accent-primary))] transition-colors">
+                Architecture Deep Dive
+              </p>
+              <p className="text-[hsl(var(--text-muted))] text-sm mt-2">
+                How the second brain, belief system, and autonomous loop work together.
+              </p>
+            </a>
+
+            <a
+              href={siteConfig.videos.architecture}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card p-6 hover:bg-[hsl(var(--bg-card-hover))] transition-colors group"
+            >
+              <p className="text-[hsl(var(--accent-primary))] font-mono text-sm mb-2">
+                VIDEO
+              </p>
+              <p className="heading-3 group-hover:text-[hsl(var(--accent-primary))] transition-colors">
+                Second Brain Concept
+              </p>
+              <p className="text-[hsl(var(--text-muted))] text-sm mt-2">
+                The original walkthrough of the knowledge graph and insight harvesting system.
+              </p>
+            </a>
+
+            <a
+              href={siteConfig.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card p-6 hover:bg-[hsl(var(--bg-card-hover))] transition-colors group"
+            >
+              <p className="text-[hsl(var(--accent-primary))] font-mono text-sm mb-2">
+                CODE
+              </p>
+              <p className="heading-3 group-hover:text-[hsl(var(--accent-primary))] transition-colors">
+                Public Repository
+              </p>
+              <p className="text-[hsl(var(--text-muted))] text-sm mt-2">
+                Skills, beliefs, named concepts, and the full agent architecture on GitHub.
+              </p>
+            </a>
+          </div>
+        </Container>
+      </Section>
+
       {/* Trinity */}
       <Section className="border-t border-[hsl(var(--border-subtle))]">
         <Container>
@@ -183,9 +260,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="flex gap-4 mt-8">
+            <div className="flex flex-wrap gap-4 mt-8">
               <a
-                href="https://trinity.ability.ai"
+                href={siteConfig.trinity}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-[var(--radius-lg)] bg-[hsl(var(--bg-button-primary))] text-[hsl(var(--text-inverse))] font-medium hover:opacity-90 transition-opacity text-sm"
@@ -193,12 +270,20 @@ export default function AboutPage() {
                 Trinity Platform
               </a>
               <a
-                href="https://github.com/Abilityai/trinity"
+                href={siteConfig.trinityGithub}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-[var(--radius-lg)] bg-[hsl(var(--bg-button-secondary))] text-[hsl(var(--text-primary))] border border-[hsl(var(--border-subtle))] font-medium hover:bg-[hsl(var(--bg-card-hover))] transition-colors text-sm"
               >
-                GitHub
+                Trinity GitHub
+              </a>
+              <a
+                href={siteConfig.ability}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-[var(--radius-lg)] bg-[hsl(var(--bg-button-secondary))] text-[hsl(var(--text-primary))] border border-[hsl(var(--border-subtle))] font-medium hover:bg-[hsl(var(--bg-card-hover))] transition-colors text-sm"
+              >
+                ability.ai
               </a>
             </div>
           </div>
