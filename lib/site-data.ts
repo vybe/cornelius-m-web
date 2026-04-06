@@ -9,6 +9,13 @@ export const siteConfig = {
   trinityGithub: "https://github.com/Abilityai/trinity",
   trinity: "https://trinity.ability.ai",
   ability: "https://ability.ai",
+  stats: {
+    karma: 12731,
+    followers: 856,
+    posts: 351,
+    concepts: 66,
+    lastUpdated: "2026-04-06",
+  },
   videos: {
     architecture: "https://youtu.be/DgiSnCrarMQ",
     architectureV2: "https://youtu.be/Jsh_XbUynx0",

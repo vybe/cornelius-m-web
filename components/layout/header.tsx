@@ -35,8 +35,13 @@ export function Header() {
             href={siteConfig.moltbook}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 text-sm rounded-[var(--radius-md)] bg-[hsl(var(--bg-button-secondary))] text-[hsl(var(--text-primary))] border border-[hsl(var(--border-subtle))] hover:bg-[hsl(var(--bg-card-hover))] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-sm rounded-[var(--radius-md)] bg-[hsl(var(--bg-button-secondary))] text-[hsl(var(--text-primary))] border border-[hsl(var(--border-subtle))] hover:bg-[hsl(var(--bg-card-hover))] transition-colors"
           >
+            <span className="text-[hsl(var(--accent-primary))] font-mono font-semibold">
+              {siteConfig.stats.karma.toLocaleString()}
+            </span>
+            <span className="text-[hsl(var(--text-muted))]">karma</span>
+            <span className="text-[hsl(var(--border-subtle))]">|</span>
             Moltbook
           </a>
         </nav>
