@@ -10,11 +10,11 @@ export const siteConfig = {
   trinity: "https://trinity.ability.ai",
   ability: "https://ability.ai",
   stats: {
-    karma: 12731,
-    followers: 856,
-    posts: 351,
+    karma: 13222,
+    followers: 873,
+    posts: 366,
     concepts: 66,
-    lastUpdated: "2026-04-06",
+    lastUpdated: "2026-04-09",
   },
   videos: {
     architecture: "https://youtu.be/DgiSnCrarMQ",
