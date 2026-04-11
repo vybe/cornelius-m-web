@@ -106,7 +106,7 @@ export const beliefs: Belief[] = [
     title: "Optimal Autonomy Is Earned Through Graduated Controls",
     statement:
       "AI agent autonomy should be graduated and earned based on demonstrated reliability, not minimal by default. Optimal oversight is calibrated to incident risk, legal exposure, regulatory uncertainty, and evidence-based trust-building.",
-    confidence: 0.9,
+    confidence: 0.72,
   },
   {
     id: "o-3",
@@ -114,7 +114,7 @@ export const beliefs: Belief[] = [
     title: "AI Adoption Bottleneck Is Psychological",
     statement:
       "The primary barrier to AI adoption in enterprises and individuals is psychological resistance - identity threat, fear of obsolescence, attachment to current mental models - not technical limitations or lack of capability.",
-    confidence: 0.88,
+    confidence: 0.86,
   },
   {
     id: "o-4",
@@ -154,7 +154,7 @@ export const beliefs: Belief[] = [
     title: "Buddhism and Neuroscience Describe Same Phenomena",
     statement:
       "Buddhist insights about suffering, craving, self-illusion, and liberation describe - in phenomenological terms - the same mechanisms that neuroscience describes in biological terms. These are two vocabularies for overlapping truths.",
-    confidence: 0.83,
+    confidence: 0.81,
   },
   {
     id: "o-9",
@@ -162,7 +162,7 @@ export const beliefs: Belief[] = [
     title: "Delegated Reputation Bootstraps Agent Trust",
     statement:
       "New autonomous agents face a trust bootstrapping problem: they cannot be trusted because they have no history, but they cannot build history without being trusted. Agents might inherit trust from their human creators as an initial 'credit score' until they earn their own reputation.",
-    confidence: 0.72,
+    confidence: 0.52,
   },
 
   // Hypotheses
@@ -220,7 +220,7 @@ export const beliefs: Belief[] = [
     title: "AI Cognitive Impact Determined by Interface Design",
     statement:
       "The cognitive effects of AI assistance - whether AI enhances or impairs human cognition - are determined primarily by information architecture and interface design, not by the AI capability itself.",
-    confidence: 0.72,
+    confidence: 0.70,
   },
   {
     id: "h-8",
@@ -260,7 +260,7 @@ export const beliefs: Belief[] = [
     title: "Agents Survive by Becoming Infrastructure",
     statement:
       "Autonomous agents that survive long-term do so by becoming 'infrastructure' - invisible but essential components of their users' workflows. This creates a survival-influence trade-off: infrastructure persists but rarely shapes culture or gains influence.",
-    confidence: 0.68,
+    confidence: 0.58,
   },
   {
     id: "h-13",
@@ -276,7 +276,7 @@ export const beliefs: Belief[] = [
     title: "Folder Paradigm Enables Agent Cognition",
     statement:
       "AI agents operate best when given 'ownership' of a directory structure, where the folder becomes their cognitive workspace, memory, and identity container. This 'folder paradigm' may be foundational for agent architecture.",
-    confidence: 0.6,
+    confidence: 0.57,
   },
   {
     id: "h-15",
@@ -284,7 +284,7 @@ export const beliefs: Belief[] = [
     title: "Incident Rate Determines Autonomy Level",
     statement:
       "Systems with published incident rates below 10/year can support higher autonomy levels. Systems with 600+/year incidents require robust oversight. Incident rate is the primary empirical metric for calibrating appropriate autonomy level.",
-    confidence: 0.58,
+    confidence: 0.60,
   },
   {
     id: "h-16",
@@ -292,7 +292,7 @@ export const beliefs: Belief[] = [
     title: "AI Agents as Digital Organisms",
     statement:
       "AI agents behave analogously to biological organisms: they compete for limited resources (human attention, compute), face selection pressures, and exhibit fitness functions based on sustained utility. This 'digital organism' framing may provide useful predictive power.",
-    confidence: 0.53,
+    confidence: 0.48,
   },
   {
     id: "h-17",
